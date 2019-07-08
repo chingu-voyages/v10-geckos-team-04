@@ -3,7 +3,7 @@ Add-project-description-here | Voyage-10 | https://chingu.io/
 
 ## Installation
 
-Prepare boiler plate:
-create-react-app spiral-weather
-cd spiral-weather
-npm install --save redux react-redux
+Prepare boiler plate:<br>
+create-react-app spiral-weather<br>
+cd spiral-weather<br>
+npm install --save redux react-redux<br>
