@@ -2,7 +2,7 @@ import React from 'react';
 import ZipBox from './ZipBox';
 
 const CitiesBox = () => {
-  return <div>
+  return <div className = 'CitiesBox-wrap'>
            CitiesBox
            <ZipBox/>
          </div>;

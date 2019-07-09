@@ -3,7 +3,7 @@ import MainBox from './MainBox';
 import CitiesBox from'./CitiesBox';
 
 const App = () => {
-  return <div>App
+  return <div className = 'App-wrap'>App
            <MainBox/>
            <CitiesBox/>
          </div>;

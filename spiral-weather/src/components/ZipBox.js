@@ -2,7 +2,7 @@ import React from 'react';
 import Diagram from './Diagram';
 
 const ZipBox = () => {
-  return <div>
+  return <div className = 'ZipBox-wrap'>
            ZipBox
            <Diagram/>
          </div>;
