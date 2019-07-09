@@ -1,7 +1,11 @@
 import React from 'react';
+import Diagram from './Diagram';
 
 const ZipBox = () => {
-  return <div>ZipBox</div>;
+  return <div>
+           ZipBox
+           <Diagram/>
+         </div>;
 };
 
 export default ZipBox;
