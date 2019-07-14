@@ -2,4 +2,4 @@
 
 import React from 'react'
 
-export const APIkaeyDarkSky = '123ewrerer231231212102er123';
+export const APIkeyDarkSky = '123ewrerer231231212102er123';
