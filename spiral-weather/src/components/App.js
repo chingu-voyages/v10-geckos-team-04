@@ -10,7 +10,7 @@ class App extends Component {
     this.props.fetchWeather();
   }
   render() {
-    console.log(this.props.posts);
+    console.log('Response inside <App/>:',this.props.posts);
     return (
       <div className = 'App-wrap'>App
              <MainBox/>

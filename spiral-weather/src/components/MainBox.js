@@ -1,7 +1,42 @@
-import React from 'react';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 
-const MainBox = ()=>{
-  return <div className = 'MainBox-wrap'>MainBox</div>;
+class MainBox extends Component {
+
+
+  renderList() {
+    if (this.props.posts.data){
+      var response = this.props.posts;
+      var data = response.data;
+      var currentData = data.currently;
+      var d = new Date(currentData.time);
+      console.log('data:',data);
+      console.log('currentData:',currentData);
+      return (
+        <div>
+          Location:{data.timezone}<br/>
+          summary:{currentData.summary}<br/>
+          Temprature:{currentData.temperature}<br/>
+          Time: {d.toUTCString()}
+
+        </div>
+      )
+    }
+  }
+
+  render() {
+    return (
+      <div className = 'MainBox-wrap'>
+        MainBox
+        <div>
+          {this.renderList()}
+        </div>
+      </div>)
+    }
 };
 
-export default MainBox;
+const mapStateToProps = state => {
+  return {posts:state.posts};
+};
+
+export default connect(mapStateToProps)(MainBox);
