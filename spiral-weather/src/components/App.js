@@ -9,10 +9,15 @@ class App extends Component {
   componentDidMount(){
     this.props.fetchWeather();
   }
-  return <div className = 'App-wrap'>App
-           <MainBox/>
-           <CitiesBox/>
-         </div>;
+  render() {
+    return (
+      <div className = 'App-wrap'>App
+             <MainBox/>
+             <CitiesBox/>
+      </div>)
+
+  }
+
 };
 
 export default connect(null,{fetchWeather})(App);
