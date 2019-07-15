@@ -9,7 +9,8 @@ class MainBox extends Component {
       var response = this.props.posts;
       var data = response.data;
       var currentData = data.currently;
-      var d = new Date(currentData.time);
+      var d = new Date(currentData.time*1000);
+      console.log('time:',currentData.time);
       console.log('data:',data);
       console.log('currentData:',currentData);
       return (
@@ -17,7 +18,7 @@ class MainBox extends Component {
           Location:{data.timezone}<br/>
           summary:{currentData.summary}<br/>
           Temprature:{currentData.temperature}<br/>
-          Time: {d.toUTCString()}
+          Time: {d.toString()}
 
         </div>
       )
