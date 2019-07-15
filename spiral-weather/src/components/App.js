@@ -10,14 +10,20 @@ class App extends Component {
     this.props.fetchWeather();
   }
   render() {
+    console.log(this.props.posts);
     return (
       <div className = 'App-wrap'>App
              <MainBox/>
              <CitiesBox/>
       </div>)
-
   }
+
+
 
 };
 
-export default connect(null,{fetchWeather})(App);
+const mapStateToProps = state => {
+  return {posts: state.posts};
+};
+
+export default connect(mapStateToProps,{fetchWeather})(App);
