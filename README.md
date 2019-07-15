@@ -12,8 +12,10 @@ npm install --save redux react-redux axios redux-thunk<br>
 ### API key
 
 App use API request to https://darksky.net/dev
+
 We avoiding put API key to github. For checking or use this app neccessary to register through link above and get API key.
-Next step is put this key inside src\api\key-example.js file (assign to variable APIkeyDarkSky ) and rename this file to keys.js.
+
+Next step is put this key inside src\api\key-example.js file (assign to variable APIkeyDarkSky ) and rename this file to keys.js (its mentioned in gitignore file - so your personal API key doesnt get Github server... its remains in your computer).
 
 ### Access-Control-Allow-Origin issue
 
