@@ -6,12 +6,12 @@ class MainBox extends Component {
 
   renderList() {
     if (this.props.posts.data){
-      console.log('Current:',this.props.posts.data.currently.summary);
       var response = this.props.posts;
       var data = response.data;
       var currentData = data.currently;
       var d = new Date(currentData.time);
-      //console.log('d=',d.toUTCString());
+      console.log('data:',data);
+      console.log('currentData:',currentData);
       return (
         <div>
           Location:{data.timezone}<br/>
@@ -25,8 +25,6 @@ class MainBox extends Component {
   }
 
   render() {
-    console.log('this.props.posts.data:',this.props.posts.data);
-
     return (
       <div className = 'MainBox-wrap'>
         MainBox
