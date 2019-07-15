@@ -7,13 +7,14 @@ class MainBox extends Component {
   renderList() {
     if (this.props.posts.data){
       console.log('Current:',this.props.posts.data.currently.summary);
-
-      var currentData = this.props.posts.data.currently;
+      var response = this.props.posts;
+      var data = response.data;
+      var currentData = data.currently;
       var d = new Date(currentData.time);
       //console.log('d=',d.toUTCString());
       return (
         <div>
-          Location:{this.props.posts.data.timezone}<br/>
+          Location:{data.timezone}<br/>
           summary:{currentData.summary}<br/>
           Temprature:{currentData.temperature}<br/>
           Time: {d.toUTCString()}
