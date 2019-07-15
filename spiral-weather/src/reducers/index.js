@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
+import postWeather from './postWeather';
 
 export default combineReducers({
-  replaceMe: () => 'hi there'
+  post: postWeather
 });
