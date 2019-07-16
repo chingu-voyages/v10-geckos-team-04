@@ -10,7 +10,7 @@ class DayBox extends Component {
       console.log('Inside Daybox, data:',data)
       console.log('Inside Daybox, hourlyData:',hourlyData)
       return(
-        <div>Here suppose data</div>
+        <div>Here suppose data of box #{this.props.count}</div>
       )
     };
 
