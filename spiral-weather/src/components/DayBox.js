@@ -9,8 +9,13 @@ class DayBox extends Component {
       let hourlyData = data.hourly.data;
       console.log('Inside Daybox, data:',data)
       console.log('Inside Daybox, hourlyData:',hourlyData)
+      let dayFrame = this.props.count*24
+      let d = new Date(hourlyData[dayFrame-24].time*1000);
       return(
-        <div>Here suppose data of box #{this.props.count}</div>
+        <div> Here suppose data of box #{this.props.count} dayFrame:{dayFrame}
+          <br/>
+          {dayFrame-24}:time:{d.toString()}
+        </div>
       )
     };
 
