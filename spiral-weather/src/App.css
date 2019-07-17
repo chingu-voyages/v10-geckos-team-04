@@ -49,3 +49,8 @@
   border: solid 1px green;
   margin: auto;
 }
+
+.DayBox-hourly{
+  display: inline-block;
+  border: solid red 1px;
+}

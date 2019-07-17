@@ -11,13 +11,17 @@ class DayBox extends Component {
       console.log('Inside Daybox, hourlyData:',hourlyData)
       let dayFrame = this.props.count*24
       console.log('count:',this.props.count,' dayFrame:',dayFrame);
-      let d1 = new Date(hourlyData[dayFrame-24].time*1000);
-      let d2 = new Date(hourlyData[dayFrame-23].time*1000);
+      let tapeArray = [];
+      let i;
+      for(i=dayFrame-23;i<dayFrame+1;i++){
+        tapeArray.push(hourlyData[i])
+      }
       return(
-        <div> Here suppose data of box #{this.props.count} dayFrame:{dayFrame}
+        <div>   DayBox: {new Date(hourlyData[dayFrame-24].time*1000).toString()}
           <br/>
-          {dayFrame-24}:time:{d1.toString()}<br/>
-          {dayFrame-23}:time:{d2.toString()}<br/>
+          {dayFrame-24}:time:{new Date(hourlyData[dayFrame-24].time*1000).toString().replace(/.*(\d{2}:\d{2})(:\d{2}).*/, "$1")}<br/>
+          {dayFrame-23}:time:{new Date(hourlyData[dayFrame-23].time*1000).toTimeString().replace(/.*(\d{2}:\d{2})(:\d{2}).*/, "$1")}<br/>
+          {tapeArray.map((item,index)=>(<span key={index} className='DayBox-hourly'>{new Date(item.time*1000).toTimeString().replace(/.*(\d{2}:\d{2})(:\d{2}).*/, "$1")} t:{item.temperature} <br/>wind:{item.windSpeed} <br/>{item.summary}<br/></span>))}
         </div>
       )
     };
@@ -26,7 +30,6 @@ class DayBox extends Component {
   render(){
     return(
       <div className = 'DayBox-wrap'>
-        DayBox
         {this.renderList()}
       </div>)
   }
