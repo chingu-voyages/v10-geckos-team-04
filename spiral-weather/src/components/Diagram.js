@@ -6,7 +6,6 @@ const Diagram = () => {
            Diagram
            <DayBox count={1}/>
            <DayBox count={2}/>
-           <DayBox count={3}/>
          </div>;
 };
 
